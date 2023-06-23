@@ -1,13 +1,13 @@
 #!/bin/bash
 
-my_line="$1"
+my_number="$1"
 filename="$2"
 
 # Read the first line from the script file
-first_line=$(head -n "$my_line" "$filename")
+my_line=$(head -n "$my_number" "$filename" | tail -n 1)
 
 # Construct the command to execute with input arguments
-command="bash -c \"$first_line \""
+command="bash -c \"$my_line\""
 
 # Execute the command
 echo "$command"
