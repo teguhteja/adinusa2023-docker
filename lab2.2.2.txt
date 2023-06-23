@@ -1,0 +1,18 @@
+# From DockerHub
+docker search nginx
+
+# From Harbor
+skopeo list-tags docker://registry.adinusa.id/btacademy/nginx
+
+docker run -d --name nginx1 -p 80:80 registry.adinusa.id/btacademy/nginx:latest
+
+docker inspect nginx1
+
+docker run -d --name nginx2 -p 80 registry.adinusa.id/btacademy/nginx:latest
+
+curl localhost:$(docker port nginx2 80 | cut -d : -f 2)
+
+docker ps -a 
+docker container ls -a
+
+docker images

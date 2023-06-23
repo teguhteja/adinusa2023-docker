@@ -1,0 +1,4 @@
+nusactl login
+nusactl start do-002-2
+nusactl grade do-002-2
+nusactl finish do-002-2

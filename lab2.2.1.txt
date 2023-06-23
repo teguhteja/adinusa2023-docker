@@ -1,0 +1,27 @@
+# From DockerHub
+docker search redis
+
+# From Harbor
+skopeo list-tags docker://registry.adinusa.id/btacademy/redis
+
+docker run registry.adinusa.id/btacademy/redis  # CTRL + c for quit
+docker run -d registry.adinusa.id/btacademy/redis  # Running in background (Background)
+docker run -d --name redis1 registry.adinusa.id/btacademy/redis # Giving the container a name
+
+docker ps 
+docker container ls
+
+docker ps -a
+docker container ls -a
+
+# docker inspect CONTAINER_NAME/CONTAINER_ID
+docker inspect redis1
+
+# docker logs CONTAINER_NAME/CONTAINER_ID
+docker logs redis1
+
+# docker top CONTAINER_NAME/CONTAINER_ID
+docker top redis1
+
+# docker stop CONTAINER_NAME/CONTAINER_ID
+docker stop redis1
