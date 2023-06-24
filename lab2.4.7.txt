@@ -1,0 +1,19 @@
+docker run (practice 07)
+1. Create database containers with limited specifications.
+docker container run -d --name ch6_mariadb --memory 256m --cpu-shares 1024 --cap-drop net_raw -e MYSQL_ROOT_PASSWORD=test registry.adinusa.id/btacademy/mariadb:5.5
+
+2. Create a wordpress container and connect it to the database container.
+docker container run -d -p 80:80 -P --name ch6_wordpress  --memory 512m --cpu-shares 512 --cap-drop net_raw --link ch6_mariadb:mysql -e WORDPRESS_DB_PASSWORD=test registry.adinusa.id/btacademy/wordpress:5.0.0-php7.2-apache
+
+3. Check logs, running process, and resource.
+docker logs ch6_mariadb
+docker logs ch6_wordpress
+
+docker top ch6_mariadb
+docker top ch6_wordpress
+
+docker stats ch6_mariadb
+docker stats ch6_wordpress
+
+4. Test browsing.
+Open in browser http://10.10.10.11 then complete the installation

@@ -1,0 +1,21 @@
+docker run (practice 06)
+1. Run ubuntu containers with names ubuntu1 & ubuntu2.
+docker run -dit --name ubuntu1 registry.adinusa.id/btacademy/ubuntu
+docker run -dit --name ubuntu2 registry.adinusa.id/btacademy/ubuntu
+
+2. Display list container.
+docker ps
+
+3. Pause container ubuntu.
+docker pause ubuntu1
+docker pause ubuntu2
+
+4. Check in list container if the container status is paused.
+docker ps
+
+5. Check resource usage when the ubuntu container is paused.
+docker stats ubuntu1
+docker stats ubuntu2
+
+6. Unpause container ubuntu1.
+docker unpause ubuntu1

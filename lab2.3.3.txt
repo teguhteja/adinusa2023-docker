@@ -29,7 +29,7 @@ docker exec -it nginx2 /bin/bash
 apt-get update -y && apt-get install nano -y
 
 9. Edit index.html and move index.html to default directory nginx
-echo "hello, ttm" >> index.html
+echo "hello, username." > /usr/share/nginx/html/index.html
 mv index.html /usr/share/nginx/html
 
 10. Restart service nginx.

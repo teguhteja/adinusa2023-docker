@@ -1,0 +1,12 @@
+docker run (practice 05)
+1. Running mysql container with additional parameters.
+docker run -d --name my-mysql -e MYSQL_ROOT_PASSWORD=RAHASIA -e MYSQL_DATABASE=latihan05 -p 3306:3306 registry.adinusa.id/btacademy/mysql
+
+2. Pull image phpmyadmin from harbor.
+docker pull registry.adinusa.id/btacademy/phpmyadmin:latest
+
+3. Running phpmyadmin container and connect it with mysql container.
+docker run --name my-phpmyadmin -d --link my-mysql:db -p 8090:80 registry.adinusa.id/btacademy/phpmyadmin
+
+4. Test browsing.
+open in browser http://10.10.10.11:8090 login with user: `root` dan password: `RAHASIA` 
