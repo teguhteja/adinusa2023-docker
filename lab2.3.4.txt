@@ -1,0 +1,21 @@
+1. Search image ubuntu from DockerHub & Harbor
+# From DockerHub
+docker search ubuntu
+
+# From Harbor
+skopeo list-tags docker://registry.adinusa.id/btacademy/ubuntu
+
+2. Pull image ubuntu from harbor
+docker pull registry.adinusa.id/btacademy/ubuntu
+
+3. Running the ubuntu container and access to the console.
+docker run -it --name ubuntu1 registry.adinusa.id/btacademy/ubuntu
+
+Exit the container with Ctrl+D or exit
+docker ps -a
+
+4. Run the ubuntu container and delete it when exiting the container.
+docker run -it --rm --name ubuntu2 registry.adinusa.id/btacademy/ubuntu
+
+Exit the container with Ctrl+D or exit
+docker ps -a
