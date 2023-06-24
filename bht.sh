@@ -3,7 +3,7 @@
 my_number="$1"
 filename="$2"
 
-# Read the first line from the script file
+# Read the n line from the script file
 my_line=$(head -n "$my_number" "$filename" | tail -n 1)
 
 # Construct the command to execute with input arguments
